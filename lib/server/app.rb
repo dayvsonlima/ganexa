@@ -1,5 +1,4 @@
 require 'sinatra/base'
-require 'pp'
 
 class App < Sinatra::Base
   %i(get post).each do |method|
