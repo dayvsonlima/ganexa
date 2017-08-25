@@ -1,0 +1,4 @@
+#!/usr/bin/env ruby
+require "ganexa/cli"
+
+Ganexa::CLI.start
