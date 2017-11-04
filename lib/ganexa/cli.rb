@@ -2,7 +2,7 @@ require 'thor'
 require 'ganexa'
 require_relative '../server/app'
 
-trap("SIGINT") { exit! }
+trap('SIGINT') { exit! }
 
 module Ganexa
   class CLI < Thor
