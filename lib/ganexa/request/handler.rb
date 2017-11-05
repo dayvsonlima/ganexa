@@ -1,19 +1,19 @@
-require_relative 'params'
-
 module Request
   class Handler
-    def initialize(request, params)
-      @request = request
-      @params  = params
+    def initialize(request, request_params, server)
+      @server         = server
+      @request        = request
+      @request_params = request_params
     end
 
     def run
-      params
+      render = Request::Render.new(@request, params, @server)
+      render.run
     end
 
     private
       def params
-        @params ||= Params.new(@request.query_string, params)
+        @params ||= Request::Params.new(@request.query_string, @request_params)
       end
   end
 end

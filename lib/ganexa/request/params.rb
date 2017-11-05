@@ -1,10 +1,8 @@
 module Request
-  def Params
+  class Params
     def initialize(request, params)
       @request = request
       @params  = params
-
-      binding_params
     end
 
     def post
