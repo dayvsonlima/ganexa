@@ -1,6 +1,6 @@
 require 'thor'
 require 'ganexa'
-require_relative '../server/app'
+require_relative 'server'
 
 trap('SIGINT') { exit! }
 
@@ -12,7 +12,7 @@ module Ganexa
 
     desc 'server', 'ganexa server'
     def server
-      App.run!
+      Server.run!
     end
 
     desc 'version', 'ganexa version'
